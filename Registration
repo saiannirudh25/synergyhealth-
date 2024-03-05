@@ -1,0 +1,29 @@
+// components/Registration.js
+
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+
+function Registration() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const history = useHistory();
+
+  const handleRegistration = () => {
+    // Your registration logic here
+    // Example: validate email and password, send request to backend
+    // If successful registration, redirect to login page
+    history.push('/');
+  };
+
+  return (
+    <div>
+      <h1>Registration</h1>
+      <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+      <button onClick={handleRegistration}>Register</button>
+      <p>Already have an account? <Link to="/">Login</Link></p>
+    </div>
+  );
+}
+
+export default Registration;
