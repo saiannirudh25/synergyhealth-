@@ -1,0 +1,33 @@
+def calculate_bmi(weight, height):
+    return weight / (height ** 2)
+
+def bmi_category(bmi):
+    if bmi < 18.5:
+        return "Underweight"
+    elif 18.5 <= bmi < 25:
+        return "Normal weight"
+    elif 25 <= bmi < 30:
+        return "Overweight"
+    else:
+        return "Obesity"
+
+def suggest_diet_plan(category):
+    if category == "Underweight":
+        return "Your diet should focus on increasing calorie intake with nutrient-dense foods such as nuts, seeds, avocados, whole grains, lean proteins, and healthy fats. Consider eating larger portions or adding snacks between meals."
+    elif category == "Normal weight":
+        return "Maintain a balanced diet with a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats. Monitor portion sizes and avoid excessive consumption of processed foods and sugary snacks."
+    elif category == "Overweight":
+        return "Focus on portion control and moderation. Choose whole, nutrient-dense foods over processed options, and incorporate regular exercise into your routine."
+    else:
+        return "Work with a healthcare provider or registered dietitian to create a personalized plan for gradual weight loss. Focus on balanced meals with reduced calorie intake and regular physical activity."
+
+weight = float(input("Enter your weight in kilograms: "))
+height = float(input("Enter your height in meters: "))
+
+bmi = calculate_bmi(weight, height)
+category = bmi_category(bmi)
+
+print("Your BMI is:", round(bmi, 2))
+print("You are categorized as:", category)
+print("Here's a suggested diet plan for you:")
+print(suggest_diet_plan(category))

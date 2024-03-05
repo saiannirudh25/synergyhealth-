@@ -1,0 +1,37 @@
+<!-- blood_pressure_log.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Pressure Log</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Blood Pressure Log</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Systolic Pressure (mmHg)</th>
+                    <th>Diastolic Pressure (mmHg)</th>
+                    <!-- Add more columns as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in blood_pressure_log %}
+                    <tr>
+                        <td>{{ entry.date }}</td>
+                        <td>{{ entry.systolic }}</td>
+                        <td>{{ entry.diastolic }}</td>
+                        <!-- Display more data for each blood pressure log entry -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/profile" class="btn btn-secondary">Back to Profile</a>
+    </div>
+</body>
+</html>

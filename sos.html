@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Alert</title>
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>SOS Alert</h1>
+    <p>This SOS alert feature can help you in emergencies. By clicking the button below, an alert will be sent to the ambulance and your emergency contacts.</p>
+    <form action="{{ url_for('sos') }}" method="post">
+        <button type="submit">Send SOS Alert</button>
+    </form>
+</body>
+</html>

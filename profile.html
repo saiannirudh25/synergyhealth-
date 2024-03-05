@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://source.unsplash.com/random/1920x1080');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .profile-info p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .logout-btn, .template-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .logout-btn:hover, .template-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Profile</h2>
+        <div class="profile-info">
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <!-- Add more profile information here -->
+        </div>
+        <a class="logout-btn" href="./logout">Logout</a>
+        <div class="buttons">
+            <button class="template-btn" onclick="window.location.href='/sleep_log'">Sleep Log</button>
+            <button class="template-btn" onclick="window.location.href='/weight_tracker'">Weight Tracker</button>
+            <button class="template-btn" onclick="window.location.href='/exercise_log'">Exercise Log</button>
+            <button class="template-btn" onclick="window.location.href='/blood_pressure_log'">Blood Pressure Log</button>
+            <button class="template-btn" onclick="window.location.href='/activity_log'">Activity Log</button>
+        </div>
+    </div>
+</body>
+</html>

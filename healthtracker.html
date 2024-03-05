@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medication Reminders</title>
+</head>
+<body>
+    <h2>Medication Reminders</h2>
+    <form action="{{ url_for('medication_reminders') }}" method="post">
+        <label for="medication">Medication:</label><br>
+        <input type="text" id="medication" name="medication" required><br>
+        <label for="time">Time:</label><br>
+        <input type="time" id="time" name="time" required><br>
+        <!-- Add more medication fields as needed -->
+        <button type="submit">Set Reminder</button>
+    </form>
+    <h3>Today's Medication Reminders</h3>
+    <ul>
+        {% for medication in medications %}
+        <li>{{ medication.name }} - {{ medication.time }}</li>
+        <!-- Add more medication fields as needed -->
+        {% endfor %}
+    </ul>
+    <p><a href="{{ url_for('profile') }}">Back to Profile</a></p>
+</body>
+</html>

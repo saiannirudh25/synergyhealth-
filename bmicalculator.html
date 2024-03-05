@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <p>Use the BMI calculator to calculate your Body Mass Index (BMI). Enter your weight and height below.</p>
+    <form action="{{ url_for('bmi_calculator') }}" method="post">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" name="weight" id="weight" required>
+        <br>
+        <label for="height">Height (cm):</label>
+        <input type="number" name="height" id="height" required>
+        <br>
+        <button type="submit">Calculate BMI</button>
+    </form>
+</body>
+</html>
