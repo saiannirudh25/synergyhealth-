@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Change this to a secure key
+app.secret_key = '****'  # Change this to a secure key
 
 # Dummy user database (replace with a proper database in real-world applications)
 users = []
